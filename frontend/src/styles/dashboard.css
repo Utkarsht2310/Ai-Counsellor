@@ -1,0 +1,149 @@
+/* ===== Page ===== */
+.dashboard-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #f8fafc;
+  padding: 40px;
+}
+
+.dashboard-container h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #a5b4fc;
+}
+
+/* ===== Profile Summary ===== */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.summary-grid div {
+  font-size: 15px;
+}
+
+.summary-grid span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* ===== Profile Strength ===== */
+.strength-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.strength {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.strength.strong {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+.strength.average,
+.strength.in-progress,
+.strength.draft {
+  background: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+}
+
+.strength.weak {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* ===== Stage Indicator ===== */
+.stage-indicator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stage {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #020617;
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.stage span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.stage.active {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+/* ===== To-Do ===== */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background-color: #020617;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.todo-list li:hover {
+  background-color: #1e293b;
+}
+
+.todo-list li.done {
+  text-decoration: line-through;
+  color: #64748b;
+  background-color: rgba(100, 116, 139, 0.15);
+}
+
+.todo-hint {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-indicator {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-container {
+    padding: 24px;
+  }
+}

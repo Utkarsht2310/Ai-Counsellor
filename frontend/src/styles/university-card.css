@@ -1,0 +1,111 @@
+.uni-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.uni-card:hover {
+  transform: translateY(-2px);
+}
+
+.uni-card.dream { border-top: 4px solid #ff4757; }
+.uni-card.target { border-top: 4px solid #2ed573; }
+.uni-card.safe { border-top: 4px solid #1e90ff; }
+
+.uni-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.uni-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge.dream { background: #ffe0e3; color: #ff4757; }
+.badge.target { background: #dff9e8; color: #2ed573; }
+.badge.safe { background: #e0efff; color: #1e90ff; }
+
+.location {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.uni-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.uni-stats div span {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.uni-stats div p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.uni-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.uni-actions button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-shortlist {
+  background: #2f3542;
+  color: white;
+}
+.btn-shortlist:hover { background: #1e232d; }
+
+.btn-shortlisted {
+  background: #e2e2e2;
+  color: #666;
+  cursor: default;
+}
+
+.btn-lock {
+  background: #2ed573;
+  color: white;
+}
+.btn-lock:hover { background: #26af61; }
+
+.btn-locked {
+  background: #ff4757;
+  color: white;
+  cursor: default;
+}
