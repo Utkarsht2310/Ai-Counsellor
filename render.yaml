@@ -2,8 +2,8 @@ services:
   # Backend API
   - type: web
     name: ai-counsellor-backend
-    env: python
-    region: singapore # You can change this to ohio, frankfurt, etc.
+    runtime: python
+    region: singapore
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
@@ -17,13 +17,13 @@ services:
         value: 3.9.0
 
   # Frontend Static Site
-  - type: static
+  - type: web
     name: ai-counsellor-frontend
-    env: node
+    runtime: static
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishDir: dist
+    staticPublishPath: ./dist
     envVars:
       - key: VITE_API_URL
         fromService:
@@ -35,4 +35,4 @@ databases:
   - name: ai-counsellor-db
     databaseName: ai_counsellor
     user: ai_user
-    plan: free # Note: Free DBs expire after 90 days, useful for prototypes
+    plan: free
