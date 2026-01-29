@@ -25,11 +25,11 @@ services:
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     envVars:
-      - key: VITE_API_URL
+      - key: VITE_API_HOST
         fromService:
           type: web
           name: ai-counsellor-backend
-          property: url
+          property: host
 
 databases:
   - name: ai-counsellor-db
