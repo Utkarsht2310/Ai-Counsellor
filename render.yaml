@@ -3,6 +3,7 @@ services:
   - type: web
     name: ai-counsellor-backend
     runtime: python
+    region: oregon
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
@@ -36,3 +37,4 @@ databases:
     databaseName: ai_counsellor
     user: ai_user
     plan: free
+    region: oregon
